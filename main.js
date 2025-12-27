@@ -228,15 +228,6 @@ class KlipperMoonraker extends utils.Adapter {
                 }),
             );
 
-            // Get active spool
-            ws.send(
-                JSON.stringify({
-                    jsonrpc: '2.0',
-                    method: 'server.spoolman.get_spool_id',
-                    id: 'printer.spoolID',
-                }),
-            );
-
             // Call update for all methods
             this.getAvailableMethods();
         });
